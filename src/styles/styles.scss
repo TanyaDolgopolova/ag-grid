@@ -1,0 +1,8 @@
+@import './colors';
+@import './checkbox';
+@import '~ag-grid-community/src/styles/ag-grid.scss';
+@import '~ag-grid-community/src/styles/ag-theme-balham/sass/ag-theme-balham.scss';
+
+body {
+    margin: 0 !important;
+}

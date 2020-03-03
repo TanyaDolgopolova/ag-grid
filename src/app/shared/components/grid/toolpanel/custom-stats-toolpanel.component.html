@@ -1,0 +1,27 @@
+<div class="content">
+    <div class="inline">
+        <dl>
+            <dt>
+                <label class="container">
+                    <input
+                        type="checkbox"
+                        name="selectionMode"
+                        (change)="selectionModeChange($event)"
+                    />
+                    <span class="checkmark"></span>
+                </label>
+            </dt>
+            <dt class="mode-label">
+                <label for="selectionMode">Selection mode</label>
+            </dt>
+        </dl>
+    </div>
+    <div class="inline">
+        <span>
+            <dl class="stats-container">
+                <dt>Total Records: {{ totalRecordCount }}</dt>
+                <dt>Total Selected: {{ selectedCount }}</dt>
+            </dl>
+        </span>
+    </div>
+</div>
