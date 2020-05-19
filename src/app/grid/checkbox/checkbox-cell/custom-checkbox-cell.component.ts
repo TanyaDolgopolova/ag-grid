@@ -14,12 +14,12 @@ export class CustomCheckboxCellComponent
   implements ICellRendererAngularComp, OnDestroy {
   private destroy: Subject<boolean> = new Subject<boolean>();
   private maxSelection: number;
-  public params: any;
+  public checked: boolean;
 
   constructor(private readonly selectionService: GridSelectionService) {}
 
   public agInit(params) {
-    this.params = params;
+    this.checked = params.value;
     this.maxSelection = params.maxSelection
       ? params.maxSelection
       : minSelectionCount;
@@ -28,9 +28,9 @@ export class CustomCheckboxCellComponent
       .pipe(takeUntil(this.destroy))
       .subscribe(count => {
         if (count === this.maxSelection) {
-          this.params.value = true;
+          this.checked = true;
         } else if (count === minSelectionCount) {
-          this.params.value = false;
+          this.checked = false;
         }
       });
   }
@@ -48,8 +48,8 @@ export class CustomCheckboxCellComponent
   }
 
   public handleCheckboxChange(value) {
-    this.params.value = value.currentTarget.checked;
-    this.selectionService.TotalSelected = this.params.value
+    this.checked = value.currentTarget.checked;
+    this.selectionService.TotalSelected = this.checked
       ? this.selectionService.TotalSelected + row
       : this.selectionService.TotalSelected - row;
   }
