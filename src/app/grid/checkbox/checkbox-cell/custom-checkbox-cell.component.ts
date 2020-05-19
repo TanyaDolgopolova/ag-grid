@@ -36,7 +36,7 @@ export class CustomCheckboxCellComponent
   }
 
   public ngOnDestroy() {
-    if (this.selectionService.TotalSelected != 0) {
+    if (this.selectionService.TotalSelected !== 0) {
       this.selectionService.TotalSelected -= row;
     }
     this.destroy.next();

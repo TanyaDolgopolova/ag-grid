@@ -3,10 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-    production: false,
-    youtubeApiKey: 'AIzaSyB0yh6_0eUUnWBm1EGCg6kYjKrkOGzj2ec',
-    youtubeApiUrl:
-        'https://www.googleapis.com/youtube/v3/search?key=AIzaSyB0yh6_0eUUnWBm1EGCg6kYjKrkOGzj2ec&maxResults=50&type=video&part=snippet&q=john'
+  production: false,
+  youtubeApiKey: "AIzaSyB0yh6_0eUUnWBm1EGCg6kYjKrkOGzj2ec",
+  youtubeApiUrl:
+    "https://www.googleapis.com/youtube/v3/search?key=AIzaSyB0yh6_0eUUnWBm1EGCg6kYjKrkOGzj2ec&maxResults=50&type=video&part=snippet&q=john"
 };
 
 /*
