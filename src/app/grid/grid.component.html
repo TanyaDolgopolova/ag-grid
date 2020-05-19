@@ -1,0 +1,12 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<ag-grid-angular
+  class="ag-theme-balham grid"
+  [rowData]="rowData"
+  [statusBar]="statusBar"
+  [frameworkComponents]="frameworkComponents"
+  [allowContextMenuWithControlKey]="true"
+  [getContextMenuItems]="getContextMenuItems"
+  [modules]="modules"
+  (gridReady)="onGridReady($event)"
+>
+</ag-grid-angular>

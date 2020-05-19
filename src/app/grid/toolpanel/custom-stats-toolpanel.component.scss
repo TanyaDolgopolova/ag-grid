@@ -1,0 +1,15 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .inline {
+    display: inline-block;
+    margin: 10px;
+    .stats-container {
+      font-size: small;
+    }
+    .mode-label {
+      margin-top: 10px;
+    }
+  }
+}
